@@ -27,7 +27,7 @@
   <hr>
   <marquee>飘~~~</marquee>
   <p><em>这几种强调</em><strong> 有什么区别呢？</strong><u>这个呢？</u><i>这个呢？</i></p>
-  <!--这段注释需要出现在页面里面-->
+  &lt;!--这段注释需要出现在页面里面-->
   <p>html的注释怎么写？</p>
   <p>下面是一段javascript代码，最适合用哪种标签呢？</p>
   <pre><code>
@@ -72,12 +72,12 @@
   </form>
   <hr>
   <p>个人信息调查表</p>
-  <form>
+  <form action="">
   <dl>
     <dt>性别</dt>
     <dd>
-      <input type="radio">男
-      <input type="radio">女
+      <input type="radio" name="gender" value="male">男
+      <input type="radio" name="gender" value="female">女
     </dd>
 
     <dt>年龄</dt>
@@ -85,16 +85,16 @@
       <select name="age" id="">
       <option value="" hidden>请选择</option>
       <optgroup label="少年">
-        <option value="">1-6岁</option>
-        <option value="">6-12岁</option>
+        <option value="1-6">1-6岁</option>
+        <option value="6-12">6-12岁</option>
       </optgroup>
       <optgroup label="青年">
-        <option value="">13-15岁</option>
-        <option value="">16-18岁</option>
+        <option value="13-15">13-15岁</option>
+        <option value="16-18">16-18岁</option>
       </optgroup>
       <optgroup label="壮年">
-        <option value="">18-22岁</option>
-        <option value="">23-30岁</option>
+        <option value="18-22">18-22岁</option>
+        <option value="23-30">23-30岁</option>
       </optgroup>
       </select>
     </dd>
@@ -111,15 +111,17 @@
 
     <dt>照片</dt>
     <dd>
-    <label>点我上传照片，我比文件上传按钮好看</label>
-    <input type="file" hidden>
+    <label for="ava">点我上传照片，我比文件上传按钮好看</label>
+    <input type="file" name="ava" hidden>
     </dd>
 
     <dt>肤色</dt>
     <dd><input type="color"></dd>
 
     <dt>自我介绍</dt>
-    <dd><textarea name="" id="" cols="30" rows="10">/textarea></textarea></dd>
+    <dd>
+      <textarea name="" id="" cols="30" rows="10">/textarea></textarea>
+    </dd>
     </dl>
 
     <fieldset disabled>
@@ -187,6 +189,7 @@
     <p>怎么样在页面显示下面的内容</p>
     &lt;span>&lt;span>
     
+    <div id="bottom"></div>
 
 
 </body>

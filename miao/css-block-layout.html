@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>css-block-layout</title>
+  <style>
+   *{
+      margin: 0;
+    }
+    .header {
+      width: 100%;
+      height: 25px;
+      background-color:black;
+      color:white;
+      text-align: center;
+      margin: 0;
+    }
+    .a p {
+      width: 600px;
+      margin: auto;
+      padding-top: 20px;
+    }
+    .b {
+      width: 600px;
+      margin: 20px auto;
+    }
+    ul {
+      padding: 0;
+    }
+    ul :hover{
+      background-color:red;
+    }
+    ul li{
+      width: 174px;
+      height: 34px;
+      border: 3px solid;
+      background-color:pink;
+      list-style-type:none;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    ul:nth-child(2){
+      margin-left: 210px;
+      margin-top: -220px;
+    }
+    ul:nth-child(3){
+      margin-left: 420px;
+      margin-top: -220px;
+    }
+ 
+    .c {
+      margin: auto;
+      width: 600px;
+    } 
+    .c p{
+      margin: 0;
+    }
+    .d {
+      width: 100%;
+      height: 50px;
+      background-color:#ee82ee;
+      text-align:center;
+      margin: 20px 0;
+    }
+    .d p{
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <p>hello world 请调整浏览器窗口大小查看效果</p>
+  </div>
+  <div class="a">
+    <p>页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px</p>
+  </div>
+  <div class="b">
+    <ul>
+      <li>宽180高40（包含边框）</li>
+      <li>水平间隙30px</li>
+      <li>垂直间隙15px</li>
+      <li>边框宽度3px</li>
+    </ul>     
+    <ul>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+    </ul>
+    <ul>
+        <li>产品</li>
+        <li>产品</li>
+        <li>产品</li>
+        <li>产品</li>
+      </ul>
+  </div>
+
+  <div class="c">
+    <p>link</p> 
+    <hr style="border: 1px dashed">
+    <p>link</p>
+    <hr style="border: 1px dashed">
+    <p>link</p>
+    <hr style="border: 1px dashed">
+    <p>link</p>
+  </div>
+  <div class="d">
+    <p>©版权所有</p>
+    <p>本页所有布局均使用块元素</p>
+    
+  </div>
+</body>
+</html>
