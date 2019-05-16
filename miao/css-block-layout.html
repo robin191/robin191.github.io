@@ -6,109 +6,121 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>css-block-layout</title>
   <style>
-   *{
+    body {
       margin: 0;
     }
-    .header {
-      width: 100%;
-      height: 25px;
+
+    header {
       background-color:black;
-      color:white;
-      text-align: center;
-      margin: 0;
+      min-width: 600px;
     }
-    .a p {
+
+    header nav{
+      width: 600px;
+      color:white;
+      margin: auto;
+    }
+
+    main {
       width: 600px;
       margin: auto;
-      padding-top: 20px;
     }
-    .b {
-      width: 600px;
-      margin: 20px auto;
+
+    p {
+      margin: 1em 0;
     }
-    ul {
+
+    ul.products {
       padding: 0;
+      list-style-type:none;
     }
-    ul :hover{
+
+    ul.products :hover {
       background-color:red;
     }
-    ul li{
-      width: 174px;
-      height: 34px;
+
+    ul.products li{
+      box-sizing: border-box;
+      width: 180px;
+      height: 40px;
       border: 3px solid;
       background-color:pink;
-      list-style-type:none;
       margin-bottom: 15px;
       text-align: center;
+      line-height: 34px;
     }
-    ul:nth-child(2){
+    ul.products li:nth-child(n+5) {
       margin-left: 210px;
-      margin-top: -220px;
     }
-    ul:nth-child(3){
+    ul.products li:nth-child(n+9) {
       margin-left: 420px;
+    }
+
+    ul.products li:nth-child(4n+5) {
       margin-top: -220px;
-    }
- 
-    .c {
-      margin: auto;
-      width: 600px;
     } 
-    .c p{
+     
+    ul.links {
+      list-style-type: none;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    ul.links li {
+      border-bottom: 1px dotted;
+      margin-bottom: -1px;
+    }
+
+    footer {
+      background-color: #ee82ee;
+    }
+
+    footer p {
+      text-align: center;
       margin: 0;
+      
     }
-    .d {
-      width: 100%;
-      height: 50px;
-      background-color:#ee82ee;
-      text-align:center;
-      margin: 20px 0;
-    }
-    .d p{
-      margin: 0;
-    }
+    
   </style>
 </head>
 <body>
-  <div class="header">
-    <p>hello world 请调整浏览器窗口大小查看效果</p>
-  </div>
-  <div class="a">
+  <header>
+    <nav>hello world 请调整浏览器窗口大小查看效果</nav>
+  </header>
+
+  <main>
     <p>页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px</p>
-  </div>
-  <div class="b">
-    <ul>
+
+    <ul class="products">
       <li>宽180高40（包含边框）</li>
       <li>水平间隙30px</li>
       <li>垂直间隙15px</li>
-      <li>边框宽度3px</li>
-    </ul>     
-    <ul>
+      <li>边框宽度3px</li>     
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
       <li>产品</li>
       <li>产品</li>
       <li>产品</li>
       <li>产品</li>
     </ul>
-    <ul>
-        <li>产品</li>
-        <li>产品</li>
-        <li>产品</li>
-        <li>产品</li>
-      </ul>
-  </div>
 
-  <div class="c">
-    <p>link</p> 
-    <hr style="border: 1px dashed">
-    <p>link</p>
-    <hr style="border: 1px dashed">
-    <p>link</p>
-    <hr style="border: 1px dashed">
-    <p>link</p>
-  </div>
-  <div class="d">
+  <ul class="links">
+    <li><a href="">link</a></li>
+    <li><a href="">link</a></li>
+    <li><a href="">link</a></li>
+    <li><a href="">link</a></li>
+    <li><a href="">link</a></li>
+  </ul>
+  </main>
+    
+
+  <footer>
     <p>©版权所有</p>
     <p>本页所有布局均使用块元素</p>
+  </footer>
+
     
   </div>
 </body>
