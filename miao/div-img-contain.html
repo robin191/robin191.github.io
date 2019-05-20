@@ -6,7 +6,32 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
 </head>
+<style>
+  .a {
+    width: 400px;
+    height: 200px;
+    border:3px solid;
+    text-align: center;/*  1.当宽多于高时 行内元素这样可以居中*/
+    line-height: 200px;/* 2.当高多于宽时，line-height大到整个元素得宽度，在verticai-middle之后可以居中*/
+    position: relative；/* 3. 垂直块级居中*/
+  }
+  .a img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;/* 3.*/
+    vertical-align: middle;/* 2.行内居中*/
+    top: 0; /* 3.*/
+    left: 0;/* 3.*/
+    right: 0;/* 3.*/
+    bottom: 0;/* 3.*/
+  }
+</style>
 <body>
-  
+  <div class="a">
+    <img src="https://cdn.pixabay.com/photo/2019/05/11/09/14/night-4195327__340.jpg" alt="">
+  </div>
+  <div class="b">
+    <img src="https://cdn.pixabay.com/photo/2019/05/09/09/46/architecture-4190820__340.jpg" alt="">
+  </div>
 </body>
 </html>
