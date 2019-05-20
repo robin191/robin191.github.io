@@ -24,17 +24,23 @@
       font-size: 28px;
       box-shadow: -5px 0 5px rgb(174, 178, 181)  inset;
       vertical-align: top;
-      overflow-y: scroll;
       
     }
     .left span {
       font-size: 32px;
-      line-height: 100px;
+      line-height: 150px;
       margin-left: 80px;
+    }
+    .left-up {
+      height: calc(100vh - 150px);
+      overflow-y: scroll;
+      vertical-align: 20%;
+      
     }
     .left ul {
       list-style-type: none;
     }
+    
     .main {
       width: 40%;
       height: 100vh;
@@ -63,13 +69,15 @@
 <body>
   <div class="left">
     <span>OALD Se7en</span>
-    <ul>
-      <li>verginous</li>
-      <li>ver</li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
+    <div class="left-up">
+      <ul>
+        <li>verginous</li>
+        <li>ver</li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
   </div>
   <div class="main"></div>
   <div class="right"></div>
