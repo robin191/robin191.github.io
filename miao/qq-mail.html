@@ -14,7 +14,6 @@
     body {
       margin: 0;
       height: 100vh;
-      overflow: hidden;
     }
     header {
       height: 85px;
@@ -30,6 +29,7 @@
       display: inline-block;
       height: calc(100vh - 85px);
       width: 100%;
+      vertical-align: top;
     }
     .left {
       display: inline-block;
@@ -40,14 +40,17 @@
       height: 100%; 
       border: 2px solid;
       background-repeat: no-repeat;
+      box-sizing: border-box;
+    
     }
     .right {
       display: inline-block;
       font-size: 17px;
       border: 1px solid;
       height: 100%;
-      width: calc(100%-200px);
+      width: calc(100% - 193px);
       vertical-align: top;
+      box-sizing: border-box;
     }
     
   </style>
