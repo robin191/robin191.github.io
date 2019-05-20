@@ -8,12 +8,15 @@
   <title>Document</title>
   <style>
     html {
-      height: 100vh;
+      height: 100%;
       font-size: 0;
     }
     body {
       margin: 0;
-      height: 100vh;
+      height: 100%;
+    }
+    div {
+      height: 100%;
     }
     header {
       height: 85px;
@@ -25,9 +28,9 @@
       margin-top: 10px;
       margin-left: 10px;
     }
-    .main {
+    main {
       display: inline-block;/*转为行内块元素 */
-      height: calc(100vh - 85px);
+      height: calc(100% - 85px);
       width: 100%;
     }
     .left {
@@ -40,7 +43,6 @@
       border: 2px solid;
       background-repeat: no-repeat;
       box-sizing: border-box;/* 把border一起包进去，之前没有包变成视口有滚动条，超出了视口*/
-    
     }
     .right {
       display: inline-block;
@@ -55,16 +57,18 @@
   </style>
 </head>
 <body>
-  <header>
-    <img src="https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/logo/logo_19_01e9c5d.gif" alt="">
-  </header>
-  <div class="main">
-    <div class="left">
-      <span>写信</span>
-    </div> 
-    <div class="right">
-      <span>下午好</span>
-    </div>
+  <div>
+    <header>
+      <img src="https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/logo/logo_19_01e9c5d.gif" alt="">
+    </header>
+    <main>
+      <div class="left">
+        <span>写信</span>
+      </div> 
+      <div class="right">
+        <span>下午好</span>
+      </div>
+    </main>
   </div>
 </body>
 
