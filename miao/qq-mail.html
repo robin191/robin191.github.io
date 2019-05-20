@@ -26,10 +26,9 @@
       margin-left: 10px;
     }
     .main {
-      display: inline-block;
+      display: inline-block;/*转为行内块元素 */
       height: calc(100vh - 85px);
       width: 100%;
-      vertical-align: top;
     }
     .left {
       display: inline-block;
@@ -40,7 +39,7 @@
       height: 100%; 
       border: 2px solid;
       background-repeat: no-repeat;
-      box-sizing: border-box;
+      box-sizing: border-box;/* 把border一起包进去，之前没有包变成视口有滚动条，超出了视口*/
     
     }
     .right {
@@ -48,9 +47,9 @@
       font-size: 17px;
       border: 1px solid;
       height: 100%;
-      width: calc(100% - 193px);
+      width: calc(100% - 193px);/* calc得符号一定要有空格，这是之前width不去作用得原因，想半天不知道为啥不起作用*/
       vertical-align: top;
-      box-sizing: border-box;
+      box-sizing: border-box;/*同样的问题*/
     }
     
   </style>
