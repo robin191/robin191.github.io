@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style type="text/less">
+    table {
+      border-collapse: collapse;
+    }
+    .table {
+      display: table;
+      table-layout: fixed;
+      text-align: left;
+      
+      .c1 {
+        width: 150px;
+      }
+      .c2 {
+        width: 250px;
+      }
+      .c3 {
+        width: 350px;
+      }
+      .c4 {
+        width: 350px;
+      }
+      .r1 {
+        font-weight: bold;
+      }
+      .r1,.r2,.r3,.r4 {
+        height: 65px;
+        border-top: 1px solid rgb(222, 226, 230);
+      }
+      .r2 {
+        border-top: 2px solid rgb(222, 226, 230);
+      }
+    }
+    .table-dark {
+      background-color:rgb(52, 58, 64);
+      color:white;
+
+      .r1 {
+        font-weight: bold;
+      }
+      .r1,.r2,.r3,.r4 {
+        height: 65px;
+        border-top: 1px solid rgb(64, 77, 85);
+      }
+      .r2 {
+        border-top: 2px solid rgb(64, 77, 85);
+      }
+    }
+    .thead-dark {
+      .r1 {
+        background-color: rgb(52, 58, 64);
+        color:white;
+      }
+    }
+    .thead-light {
+      .r1 {
+        background-color: rgb(233, 236, 239);
+        color:rgb(73,80,87);
+      }
+    }
+    .table-striped {
+      .r2,.r4 {
+        background-color: rgb(242,242,242);
+      }
+    }
+    .table-striped.table-dark {
+      color: white;
+      .r1,.r3 {
+        background-color:rgb(52, 58, 64);
+      }
+      .r2,.r4 {
+        background-color:rgb(62, 68, 74);
+      }
+    }
+    .table-bordered {
+      display: table-cell;
+      td,th {
+        border: 1px solid rgb(222, 226, 230);
+      }
+    }
+    .table-bordered.table-dark {
+      td,th {
+        border: 1px solid rgb(69, 77, 85);
+      }
+    }
+    .table-borderless {
+      display: table-cell;
+      th,td {
+        border-style:hidden;
+      }
+    }
+    .table-hover {
+      .r2:hover{
+        background-color: rgb(236,236,236);
+      }
+      .r3:hover {
+        background-color: rgb(236,236,236);
+      }
+      .r4:hover {
+        background-color: rgb(236,236,236);
+      }
+    }
+    .table-hover.table-dark {
+      .r2:hover{
+        background-color: rgb(67,73,78);
+      }
+      .r3:hover {
+        background-color: rgb(67,73,78);
+      }
+      .r4:hover {
+        background-color: rgb(67,73,78);
+      }
+    }
+    .table-sm {
+      .r1,.r2,.r3,.r4 {
+        padding: .1rem;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <table class="table table-sm table-dark">
+    <thead>
+      <tr class="r1">
+        <td class="c1">#</td>
+        <td class="c2">First</td>
+        <td class="c3">Last</td>
+        <td class="c4">Handle</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="r2">
+        <th>1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr class="r3">
+        <th>2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr class="r4">
+        <th>3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+  <script src="less.min.js"></script>
+</body>
+</html>
