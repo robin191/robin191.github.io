@@ -9,7 +9,7 @@
     html,body {
       height: 100%;
       margin: 0;
-      overflow: hidden;
+      overflow: hidden;/* position:relative 时保持原来得位置，所以还有滚动条，等明天老师讲课得时候再看看对不对*/
     }
     div {
       height: 100%;
@@ -23,7 +23,7 @@
     main {
       height: 100%;
       width: calc(100% - 600px);
-      position: relative;
+      position: relative;/* 之前写得main没有定位，以至于窗口缩小时，会跑到下面去*/
       top:-100%;
       left: 200px;
     }
@@ -46,16 +46,13 @@
       width: 200px;
       height: 100%;
       background-color:rgb(75, 168, 255);
-      position: relative;
-      top: -122.4%;
+      
     }
     .two {
       float: right;
       width: 200px;
       height: 100%;
       background-color:rgb(183, 1, 255);
-      position: relative;
-      top: -122.4%;
     }
 
   </style>
@@ -63,12 +60,13 @@
 <body>
   <div>
     <aside></aside>
+    <div class="two"></div>
+    <div class="one"></div>
     <main>
       <header></header>
       <div class="a"></div>
     </main>
-    <div class="one"></div>
-    <div class="two"></div>
+    
   </div>
 </body>
 </html>
