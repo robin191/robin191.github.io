@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+   <style>
+    @font-face {
+      font-family: 'FontAwesome';
+      src: url('font-awesome-4.7.0/fonts/fontawesome-webfont.eot?v=4.7.0');
+      src: url('font-awesome-4.7.0/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('font-awesome-4.7.0/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('font-awesome-4.7.0/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('font-awesome-4.7.0/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+      font-weight: normal;
+      font-style: normal;
+}
+
+    .fa {
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit; 
+    }
+    .fa-lg {
+      font-size: 1.33em
+    }
+    .fa-2x {
+      font-size: 2em;
+    }
+    .fa-3x{
+      font-size: 3em;
+    }
+    .fa-4x{
+      font-size: 4em;
+    }
+    .fa-5x{
+      font-size: 5em;
+    }
+    .fa-fw{
+      width: 1.28em;
+      text-align: center;
+    }
+    .fa-ul{
+      padding-left: 0;
+      list-style-type: none;
+      margin-left: 0.5em;
+    }
+    .fa-ul > li {
+      position: relative;
+    }
+    .fa-li{
+      
+      padding-right: 0.5em;
+    }
+    .fa-border{
+      border:0.1em solid #eeeeee;
+      padding: 0.2em;
+    }
+    .fa-pull-right{
+      float: right;
+    }
+    .fa-pull-left{
+      float: left;
+    }
+    .fa-spin{
+      
+    }
+    .fa-pulse{
+
+    }
+    .fa-star::before{
+      content: "\f005";
+    }
+    .fa-camera-retro:before {
+      content: "\f083";
+    }
+    .fa-home:before {
+  content: "\f015";
+}
+.fa-book:before {
+  content: "\f02d";
+}
+.fa-twitter-square:before {
+  content: "\f081";
+}
+  </style>
+</head>
+<body>
+  <div>
+  <i class="fa fa-camera-retro fa-lg fa-border"></i>
+  <i class="fa fa-camera-retro fa-2x"></i>
+  <i class="fa fa-home fa-fw" aria-hidden="true"></i>
+  <i class="fa fa-book fa-fw" aria-hidden="true"></i>
+  
+  <ul class="fa-ul">
+      <li><i class="fa-li fa fa-twitter-square"></i>List icons</li>
+      <li><i class="fa-li fa fa-book"></i>can be used</li>
+      <li><i class="fa-li fa fa-home"></i>as bullets</li>
+      <li><i class="fa-li fa fa-twitter-square"></i>in lists</li>
+    </ul>
+</div>
+</body>
+</html>

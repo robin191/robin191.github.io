@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html,body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      width: 100%;
+      height: 800px;
+      position: relative;
+    }
+    .content {
+      width: 100%;
+      height: 100%;
+      background-image: url(https://mobike.com/cn/assets/themes/moby/img/landing/hero-bg-6.jpg);
+      background-size: cover;
+
+    }
+    
+    .piece {
+      width: 100%;
+      height: 260px;
+      margin-top: 5px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .piece div {
+      width: 24.9%;
+      height: 260px;
+      background-size: cover;
+    }
+    .piece div:nth-child(1) {
+      background-image: url(https://mobike.com/cn/assets/themes/moby/img/promo-01.jpg);
+    }
+    .piece div:nth-child(2) {
+      background-image: url(https://mobike.com/cn/assets/themes/moby/img/promo-02.jpg);
+    } 
+    .piece div:nth-child(3) {
+      background-image: url(https://mobike.com/cn/assets/themes/moby/img/promo-03.jpg);
+    }
+    .piece div:nth-child(4) {
+      background-image: url(https://mobike.com/cn/assets/themes/moby/img/promo-04.jpg);
+    }
+    
+    @media (max-width:1065px) {
+      .content {
+      width: 100%;
+      height: 630px;
+      }
+      .piece {
+        width: 100%;
+        height: 520px;
+        margin-top: -169px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      .piece div {
+        width: 49.68%;
+        height: 50%;
+        margin: 1px;
+        margin-right: 0;
+        margin-left: 0;
+      }
+      
+      
+    }
+    @media (max-width:620px) {
+      .content {
+        width: 619px;
+        height: 600px;
+      }
+      .piece {
+        width: 619px;
+        height: 1040px;
+      }
+      .piece div {
+        display: block;
+        width: 619px;
+        height: 260px;
+      }
+      
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="content">
+      
+      <!-- <img src="https://mobike.com/cn/assets/themes/moby/img/landing/hero-bg-3.jpg" alt="">
+      <img src="https://mobike.com/cn/assets/themes/moby/img/landing/hero-bg-8.jpg" alt=""> -->
+    </div>
+  </header>
+  <div class="piece">
+   
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    
+  </div>
+
+  
+</body>
+</html>

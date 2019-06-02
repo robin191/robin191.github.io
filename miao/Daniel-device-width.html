@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html,body {
+      font-size: calc(100vw / 800 * 100);
+    }
+    header p:nth-child(1) {
+      margin-bottom: 0;
+      font-size: 0.2rem;
+    }
+    header p:nth-child(2) {
+      position: absolute;
+      top: 0;
+      right: 0.1rem;
+      font-size: 0.2rem;
+    }
+    hr {
+      border-top: 0.01px solid;
+      margin: 0.05rem;
+    }
+    .content {
+      position: relative;
+    }
+    .content div {
+      width: 2.64rem;
+      height: 3.96rem;
+      background-size:cover;
+      position: absolute;
+    }
+    .content div:nth-child(1) {
+      background-image: url(https://daneden.imgix.net/2018/10/portrait.jpg?auto=format&fit=crop&ixlib=react-8.6.1);
+      left:1.35rem;
+      top:0.35rem;
+    }
+    .content div:nth-child(2) {
+      background-image: url(https://daneden.imgix.net/2018/10/GenArt.png?auto=format&fit=crop&ixlib=react-8.6.1);
+      left:2.67rem;
+      top:1.4rem;
+  
+    }
+    .content div:nth-child(3) {
+      background-image: url(https://daneden.imgix.net/2019/04/home.jpeg?auto=format&fit=crop&ixlib=react-8.6.1);
+      left:3.99rem;
+      top:2.6rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p>Daniel Eden,Desiger</p>
+    <p>Blog Portfolio Library</p>
+  </header>
+  <hr>
+  <div class="content">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+</html>

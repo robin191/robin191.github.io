@@ -1,0 +1,410 @@
+html,body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  width: 100%;
+  height: 40px;
+  background-color:rgb(51, 51, 51);
+}
+.main-nav{
+  margin-left: 100px;
+}
+.main-nav ul li {
+  display: inline-block;
+  margin-top: 8px;
+}
+.main-nav ul li a{
+  color: rgb(122, 150, 164);
+  text-decoration: none;
+  font-size: 12px;
+  padding-right: 3px;
+}
+.main-nav ul li a:hover {
+  color: white;
+}
+.main-nav ul li:nth-child(11) img {
+  position: absolute;
+  top:65px;
+  left: 600px;
+  width: 100px;
+  height: 100px;
+  display: none;
+}
+.main-nav ul li:nth-child(11):hover img{
+  display: block;
+}
+
+
+.login-nav {
+  float: right;
+  margin-right: 200px;
+  margin-top: -63px;
+}
+.login-nav ul li {
+  display: inline-block;
+  padding-right: 10px;
+}
+.login-nav ul li a{
+  font-size: 12px;
+  color: rgb(122, 150, 164);
+  text-decoration: none;
+}
+.login-nav ul li i {
+  color: rgb(176, 176, 176)
+}
+.login-nav ul li:nth-child(4) {
+  margin-top: -7px;
+  padding-top: 10px;
+  padding-bottom: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgb(66,66,66);
+}
+.login-nav ul li:nth-child(4):hover {
+  background-color: white;
+}
+.login-nav ul li:nth-child(4):hover i {
+  color: rgb(255, 103, 0);
+}
+.login-nav ul li:nth-child(4):hover a {
+  color: rgb(255, 103, 0);
+}
+
+
+
+
+
+header {
+  width: 1200px;
+  height: 80px;
+  margin-left: 130px;
+  position: relative;
+}
+.logo {
+  width: 49px;
+  height: 49px;
+  position: relative;
+  top: 15px;
+  background-color:rgb(255, 103, 0);
+}
+.he-main {
+
+    margin-top: -40px;
+    margin-left: 200px;
+}
+.he-main ul li {
+  text-decoration: none;
+  display: inline-block;
+}
+ .search {
+  position: absolute;
+  left: 900px;
+  top: 15px;
+} 
+.search input {
+  display: inline-block;
+  width: 230px;
+  height: 40px;
+  border: 1px solid rgb(224, 224, 224);
+}
+.search input:nth-child(2) {
+  display: none;
+}
+.search label {
+  position: absolute;
+  top: 0;
+  right: -51px;
+  width: 50px;
+  height: 42px;
+  border: 1px solid rgb(224, 224, 224);
+}
+.search label:hover {
+  background-color:rgb(255, 103, 0);
+}
+
+.search label i {
+  line-height: 42px;
+  padding-left: 15px;
+}
+.search label:hover i {
+  color:white;
+}
+
+
+
+
+main {
+  width: 1200px;
+  height: 450px;
+  margin-left: 130px;
+}
+.main-menu {
+  height: 450px;
+  width: 230px;
+  background-color:rgba(51,51,51,0.5);
+  position: absolute;
+  z-index: 1;
+}
+.main-menu ul {
+  padding: 0;
+}
+.main-menu ul li {
+  list-style-type: none;
+  padding: 10px;
+  padding-left: 40px;
+  font-size: 16px;
+}
+.main-menu ul li:hover {
+  background-color:rgb(255, 103, 0);
+}
+.main-menu ul li a {
+  text-decoration: none;
+  color: aliceblue;
+}
+.main-menu ul ul {
+  position: absolute;
+  top: 0px;
+  left: 230px;
+  background-color: #fff;
+  /* width: 970px;
+  height: 450px; */
+  padding: 0;
+}
+
+.main-menu ul ul li {
+  display: none;
+  width: 232px;
+  height: 55px;
+  position: relative;
+}
+.main-menu ul li:hover ul li {
+  display: block;
+  
+}
+.main-menu ul li i {
+  color:  rgba(255,255,255,0.5);
+  position: absolute;
+  left: 210px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.main-pic {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.main-pic img {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  position: absolute;
+  transition: 2s;
+}
+.main-pic input {
+  display: none;
+}
+.main-pic input:checked + img {
+  opacity: 1;
+}
+.main-pic .la {
+  position: absolute;
+  bottom: 10px;
+  right: 30px;
+}
+.main-pic .la label {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border:1px solid white;
+}
+main .side {
+  position: fixed;
+  
+  right: 0;
+  top: 100px;
+  width: 80px;
+}
+main .side span {
+  display: block;
+  height: 90px;
+  color: rgb(117,117,117);
+  font-size: 14px;
+  border: 1px solid;
+  text-align: center;
+}
+main .side i {
+  display: block;
+  margin-top: 18px;
+  padding-bottom: 10px;
+}
+
+
+.part {
+  width: 1200px;
+  height: 150px;
+  margin-left: 130px;
+  position: relative;
+  margin-top: 20px;
+}
+.part table {
+  width: 230px;
+  height: 150px;
+  background-color: rgb(95, 87, 80);
+  font-size: 16px;
+  color:white;
+  border-collapse: collapse;
+}
+.part table td {
+  border: 1px solid rgb(120, 94, 87);
+  font-size: 12px;
+}
+.part table td i {
+  display: block;
+}
+.part img {
+  display: inline-block;
+  width: 310px;
+  height: 150px;
+  
+}
+.part .part-1 {
+  position: absolute;
+  top: 0;
+  left: 242px;
+}
+.part .part-2 {
+  position: absolute;
+  top: 0;
+  left: 568px;
+}
+.part .part-3 {
+  position: absolute;
+  top: 0;
+  left: 890px;
+}
+
+
+.rail {
+  margin-left: 130px;
+  margin-top: 30px;
+}
+.rail img {
+  width: 1200px;
+  height: 100px;
+}
+.product {
+  width: 100%;
+  margin-top: 30px;
+  background-color: rgb(245,245,245);
+
+}
+.product .phone {
+  width: 1200px;
+  height: 680px;
+  margin-left: 130px;
+  border: 1px solid;
+}
+
+.phone p:nth-child(2) {
+  float: right;
+  margin-top: -40px;
+}
+.phone a img{
+  float: left;
+  width: 250px;
+  height: 600px;
+}
+.phone table {
+  position: relative;
+  height: 600px;
+  width: 950px;
+  border-spacing: 20px 0;
+}
+
+.phone table tr > td {
+  border: 1px solid;
+  width: 210px;
+  height: 250px;
+  background-color: #fff;
+}
+.phone table td img {
+  width: 100px;
+  height: 130px;
+  
+}
+.phone table p {
+  font-size: 13px;
+}
+
+.product .rail2 {
+  margin-left: 130px;
+  margin-top: 10px;
+}
+.product .rail2 img {
+  width: 1200px;
+  height: 100px;
+ 
+}
+.product .home {
+  margin-top: 120px;
+  margin-left: 130px;
+  border: 1px solid;
+  width: 1200px;
+}
+.product .home table td {
+  width: 220px;
+  height: 260px;
+}
+
+.product .rail3 {
+  margin-left: 130px;
+  margin-top: 10px;
+}
+.product .rail3 img {
+  width: 1200px;
+  height: 100px;
+}
+
+.product .intell {
+  margin-top: 120px;
+  margin-left: 130px;
+  border: 1px solid;
+  width: 1200px;
+}
+.product .intell td {
+  width: 220px;
+  height: 260px;
+}
+
+.product .rail4 {
+  margin-left: 130px;
+  margin-top: 10px;
+}
+.product .rail4 img {
+  width: 1200px;
+  height: 100px;
+}
+
+.product .match {
+  margin-top: 120px;
+  margin-left: 130px;
+  border: 1px solid;
+  width: 1200px;
+}
+.product .match td {
+  width: 220px;
+  height: 260px;
+}

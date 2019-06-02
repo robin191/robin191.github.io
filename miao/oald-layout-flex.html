@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html,body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    div {
+      height: 100%;
+      display: flex;
+    }
+    aside:first-child {
+      background-color: pink;
+      flex-grow: 1;
+    }
+    main {
+      background-color: blue;
+      flex-grow: 6;
+      display: flex;
+      flex-direction: column;
+    }
+    .up {
+      flex-basis: 200px;
+      background-color: #fff;
+    }
+    .one {
+      background-color:tan;
+      flex-grow: 1;
+    }
+    .two {
+      background-color: greenyellow;
+      flex-grow: 1;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <aside></aside>
+    <main>
+      <div class="up"></div>
+      <div class="down"></div>
+    </main>
+    <aside class="one"></aside>
+    <aside class="two"></aside>
+  </div>
+</body>
+</html>
