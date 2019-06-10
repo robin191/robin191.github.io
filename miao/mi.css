@@ -2,6 +2,11 @@ html,body {
   height: 100%;
   margin: 0;
   padding: 0;
+  font-size: 0;
+}
+* {
+  font-size: 12px;
+  box-sizing: border-box;
 }
 
 .nav {
@@ -10,104 +15,207 @@ html,body {
   background-color:rgb(51, 51, 51);
 }
 .main-nav{
-  margin-left: 100px;
+  width: 1226px;
+  margin: auto;
 }
-.main-nav ul li {
-  display: inline-block;
-  margin-top: 8px;
-}
-.main-nav ul li a{
-  color: rgb(122, 150, 164);
+
+.main-left a{
+  color: rgb(176, 176, 176);
   text-decoration: none;
-  font-size: 12px;
-  padding-right: 3px;
+  line-height: 40px;
+  display: inline-block;
+  position: relative;
 }
-.main-nav ul li a:hover {
+.main-left span {
+  margin: 0 .5em;
+  color: rgb(66,60,55);
+}
+.main-left  a:hover {
   color: white;
 }
-.main-nav ul li:nth-child(11) img {
+
+.main-left .im {
+  width: 125px;
+  height: 150px;
+  background-color: #fff;
   position: absolute;
-  top:65px;
-  left: 600px;
-  width: 100px;
-  height: 100px;
+  left: 50%;
+  transform: translate(-50%);
+  box-shadow: 0 0 3px rgb(212, 212, 212);
+  z-index: 100;
   display: none;
+  border: 1px solid;
 }
-.main-nav ul li:nth-child(11):hover img{
+.main-left .im img {
+  width: 86px;
+  height: 86px;
+  margin: 20px 19px 0 19px;
+}
+.main-left a:hover .im {
   display: block;
+} 
+.main-left .im span {
+  color: #000;
+  font-size: 16px;
+  position: relative;
+  top: -10px;
+  left: 10px;
 }
 
 
 .login-nav {
   float: right;
-  margin-right: 200px;
-  margin-top: -63px;
+  color: rgb(176, 176, 176);
 }
-.login-nav ul li {
-  display: inline-block;
-  padding-right: 10px;
-}
-.login-nav ul li a{
-  font-size: 12px;
-  color: rgb(122, 150, 164);
+.login-nav  a{
   text-decoration: none;
+  margin-left: 5px;
 }
-.login-nav ul li i {
-  color: rgb(176, 176, 176)
-}
-.login-nav ul li:nth-child(4) {
-  margin-top: -7px;
-  padding-top: 10px;
-  padding-bottom: 7px;
-  padding-left: 10px;
-  padding-right: 10px;
-  background-color: rgb(66,66,66);
-}
-.login-nav ul li:nth-child(4):hover {
-  background-color: white;
-}
-.login-nav ul li:nth-child(4):hover i {
-  color: rgb(255, 103, 0);
-}
-.login-nav ul li:nth-child(4):hover a {
-  color: rgb(255, 103, 0);
-}
-
-
-
-
-
-header {
-  width: 1200px;
-  height: 80px;
-  margin-left: 130px;
-  position: relative;
-}
-.logo {
-  width: 49px;
-  height: 49px;
-  position: relative;
-  top: 15px;
+.login-nav .car {
   background-color:rgb(255, 103, 0);
-}
-.he-main {
-
-    margin-top: -40px;
-    margin-left: 200px;
-}
-.he-main ul li {
-  text-decoration: none;
+  width: 120px;
+  height: 40px;
   display: inline-block;
+  padding-left:18px;
+  position: relative;
+  color: white;
 }
+.car a {
+  color: white;
+}
+.login-nav .car:hover {
+  background-color: #fff;
+  color: rgb(255, 103, 0);
+}
+.login-nav .car:hover a {
+  color: rgb(255, 103, 0);
+}
+.login-nav .car:hover .car-outer {
+  display: block;
+  max-height: 535px;
+  transform: translatey(0px) ;
+}
+.car-outer {
+  max-height: 0px;
+  width: 315px;
+  position: absolute;
+  right: 0;
+  border:1px solid;
+  display: none;
+  transition: .6s linear;
+  z-index: 500;
+  transform: translatey(-10px);
+  background-color: #fff;
+}
+.car-inner {
+  height: 535px;
+  overflow-y: scroll;
+}
+
+.header-wrapper {
+  position: relative;
+}
+header {
+  width: 1226px;
+  height: 100px;
+  margin: auto;
+}
+header > img{
+  width: 50px;
+  height: 50px;
+  background-color:rgb(255, 103, 0);
+  float: left;
+  margin-top: 25px;
+}
+.header-main {
+  display: inline-block;
+  width: 770px;
+  margin-left: 188px;
+  height:100px;
+}
+.header-main ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 1226px;
+  margin: auto;
+}
+.header-main ul li {
+  float: left;
+}
+.header-main ul li a{
+  display: inline-block;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 40px 10px;
+}
+
+.main-list {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top:100px;
+  border-top:1px solid  rgb(224, 224, 224);
+  box-shadow: 0 3px 4px rgba(0,0,0,0.18);
+  height: 0px;
+  transition: .6s;
+  z-index: 600;
+  background-color: #fff;
+  box-sizing: border-box;
+  opacity: 0;
+}
+
+.main-list ul {
+  width: 1226px;
+  margin: auto;
+  overflow: hidden;
+}
+.main-list ul li {
+  float: flex;
+  width: 160px;
+  height: 230px;
+}
+.main-list .list-one-1 img {
+  width: 160px;
+  height: 110px;
+}
+.header-main ul:hover .main-list {
+  height: 230px;
+  opacity: 1;
+}
+.header-main ul li:hover .main-list {
+  z-index: 700;
+}
+.header-main div  div {
+  display: none;
+}
+.header-main ul li:hover div div {
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  .search {
   position: absolute;
-  left: 900px;
-  top: 15px;
+  right: 380px;
+  top: 23px;
 } 
 .search input {
   display: inline-block;
-  width: 230px;
-  height: 40px;
+  width: 244px;
+  height: 50px;
   border: 1px solid rgb(224, 224, 224);
 }
 .search input:nth-child(2) {
@@ -118,7 +226,7 @@ header {
   top: 0;
   right: -51px;
   width: 50px;
-  height: 42px;
+  height: 52px;
   border: 1px solid rgb(224, 224, 224);
 }
 .search label:hover {
@@ -126,7 +234,7 @@ header {
 }
 
 .search label i {
-  line-height: 42px;
+  line-height: 52px;
   padding-left: 15px;
 }
 .search label:hover i {
@@ -137,9 +245,9 @@ header {
 
 
 main {
-  width: 1200px;
+  width: 1226px;
   height: 450px;
-  margin-left: 130px;
+  margin:auto;
 }
 .main-menu {
   height: 450px;
@@ -230,12 +338,17 @@ main {
   height: 8px;
   border:1px solid white;
 }
+
+
+
+
+
 main .side {
   position: fixed;
-  
   right: 0;
-  top: 100px;
+  top: 290px;
   width: 80px;
+  z-index: 999999;
 }
 main .side span {
   display: block;
@@ -253,15 +366,16 @@ main .side i {
 
 
 .part {
-  width: 1200px;
-  height: 150px;
-  margin-left: 130px;
-  position: relative;
+  width: 1226px;
+  height: 170px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
   margin-top: 20px;
 }
 .part table {
-  width: 230px;
-  height: 150px;
+  width: 235px;
+  height: 170px;
   background-color: rgb(95, 87, 80);
   font-size: 16px;
   color:white;
@@ -276,35 +390,24 @@ main .side i {
 }
 .part img {
   display: inline-block;
-  width: 310px;
-  height: 150px;
-  
-}
-.part .part-1 {
-  position: absolute;
-  top: 0;
-  left: 242px;
-}
-.part .part-2 {
-  position: absolute;
-  top: 0;
-  left: 568px;
-}
-.part .part-3 {
-  position: absolute;
-  top: 0;
-  left: 890px;
+  width: 315px;
+  height: 170px;
 }
 
 
 .rail {
-  margin-left: 130px;
+  margin: auto;
+  width: 1226px;
   margin-top: 30px;
 }
 .rail img {
-  width: 1200px;
+  width: 1226px;
   height: 100px;
 }
+
+
+
+
 .product {
   width: 100%;
   margin-top: 30px;
@@ -312,62 +415,109 @@ main .side i {
 
 }
 .product .phone {
-  width: 1200px;
+  width: 1226px;
   height: 680px;
-  margin-left: 130px;
-  border: 1px solid;
+  margin: auto;
 }
-
-.phone p:nth-child(2) {
+.phone-le a img{
+  float: left;
+  width: 235px;
+  height: 614px;
+}
+.phone-header p {
+  font-size: 22px;
+}
+.phone-header p:nth-child(2) {
   float: right;
   margin-top: -40px;
 }
-.phone a img{
-  float: left;
-  width: 250px;
-  height: 600px;
-}
-.phone table {
-  position: relative;
-  height: 600px;
-  width: 950px;
-  border-spacing: 20px 0;
-}
-
-.phone table tr > td {
-  border: 1px solid;
-  width: 210px;
-  height: 250px;
-  background-color: #fff;
-}
-.phone table td img {
-  width: 100px;
-  height: 130px;
+.ph1 {
+  width: 976px;
+  height: 614px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap:wrap;
+  padding-left: 15px;
   
 }
-.phone table p {
+.ph1 div {
+  width: 235px;
+  height: 300px;
+  
+  background-color: #fff;
+  border: 1px solid;
+}
+.ph1 div img {
+  width: 160px;
+  height: 160px;
+}
+.ph1 div p {
   font-size: 13px;
 }
+.box-ph1 img {
+  margin: auto;
+  display: block;
+}
+.box-ph1 h3 {
+  text-align: center;
+  font-size: 14px;
+  
+}
 
-.product .rail2 {
-  margin-left: 130px;
-  margin-top: 10px;
-}
+
+
+
+
+
+
+
+  
+  
+
 .product .rail2 img {
-  width: 1200px;
+  display: block;
+  width: 1226px;
   height: 100px;
- 
+  margin: auto;
 }
-.product .home {
-  margin-top: 120px;
-  margin-left: 130px;
-  border: 1px solid;
-  width: 1200px;
+
+
+.home {
+  margin-top: 20px;
+  width: 1226px;
+  margin: auto;
 }
-.product .home table td {
-  width: 220px;
-  height: 260px;
+.home p {
+  font-size: 22px;
 }
+.home-left {
+  width: 235px;
+}
+.home-left img {
+  float: left;
+  width: 235px;
+  height: 300px;
+}
+.home-left img:first-child {
+  margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .product .rail3 {
   margin-left: 130px;

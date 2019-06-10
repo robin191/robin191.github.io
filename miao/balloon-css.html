@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: rgb(255,215,72);
+       
+    }
+    header {
+      width: 80%;
+      margin-left: 200px;
+    }
+    h3 {
+      margin-top: -20px;
+    }
+    button {
+      background-color: rgb(255,61,46);
+    }
+    main {
+      width: 80%;
+      margin-left: 200px;
+    }
+    .po {
+      position: relative;
+    }
+    .po p {
+      font-size: 16px;
+      text-align: center;
+      line-height: 50px;
+      width: 800px;
+      height: 50px;
+      background-color: #fff;
+    }
+    [data-balloon] {
+      display: inline-block;
+      width: 200px;
+      height: 50px;
+      position: absolute;
+      right: 200px;
+      top: 0;
+    }
+    [data-balloon]::before {
+      content: attr(data-balloon);
+      position: absolute;
+      background-color: black;
+      color: white;
+      
+    }
+    [data-balloon]::after {
+      content: "";
+      opacity: 0;
+      height: 0;
+      width: 0;
+      border: 5px solid;
+      border-color: transparent transparent black transparent;
+      position: absolute;
+      top:-20%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+    [data-balloon-pos="up"]::before{
+      top:-60%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      opacity: 0;
+    }
+    [data-balloon-pos="up"]:hover::before{
+      opacity: 1;
+    }
+    button:hover::after{
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <img src="https://kazzkiq.github.io/balloon.css/assets/img/logo.svg" alt="">
+    </div>
+    <h1>
+      <p>Simple tooltips made of pure CSS</p>
+    </h1>
+    <h3>
+      <p>Balloon.css lets you add tooltips to elements without JavaScript and in just a few lines of CSS.</p>
+    </h3>
+    <button>github</button>
+    <button>Download CSS</button>
+  </header>
+
+  <main>
+    <h2>positioning</h2>
+    <p>For positioning, use data-balloon-pos attribute with one of the values: up, down, left or right</p>
+
+    <div class="po">
+      <p>
+        &lt;button data-balloon="whats up" data-balloon-pos="up">hover me!&lt;/button&gt;
+      </p>  
+      <button data-balloon="whats up" data-balloon-pos="up">Hover me</button>
+    </div>
+  </main>
+</body>
+</html>

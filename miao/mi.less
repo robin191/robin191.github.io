@@ -1,0 +1,175 @@
+html,body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+* {
+  font-size: 12px;
+}
+
+.nav {
+  width: 100%;
+  height: 40px;
+  background-color:rgb(51, 51, 51);
+}
+.main-nav{
+  width: 1226px;
+  margin: auto;
+}
+.main-left {
+  a {
+  color: rgb(176, 176, 176);
+  text-decoration: none;
+  line-height: 40px;
+  display: inline-block;
+  position: relative;
+  }
+
+  span {
+    margin: 0 .5em;
+    color: rgb(66,60,55);
+  }
+
+  a:hover {
+    color: white;
+
+    .im {
+      display: block;
+    } 
+  }
+
+  .im {
+    width: 125px;
+    height: 150px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    box-shadow: 0 0 3px rgb(212, 212, 212);
+    z-index: 100;
+    display: none;
+    border: 1px solid;
+
+    img {
+      width: 86px;
+      height: 86px;
+      margin: 20px 19px 0 19px;
+    }
+
+    span {
+      color: #000;
+      font-size: 16px;
+      position: relative;
+      top: -10px;
+      left: 10px;
+    }
+  }
+}
+
+.login-nav {
+  float: right;
+  color: rgb(176, 176, 176);
+
+  a{
+    text-decoration: none;
+    margin-left: 5px;
+  }
+
+  .car {
+    background-color: rgb(66,66,66);
+    width: 120px;
+    height: 40px;
+    display: inline-block;
+    padding-left:18px;
+    position: relative;
+  }
+  &:hover {
+    background-color: #fff;
+    color: rgb(255, 103, 0);
+
+    a {
+      color: rgb(255, 103, 0);
+    }
+
+    .car-outer {
+      display: block;
+      max-height: 535px;
+      transform: translatey(0px) ;
+    }
+  }
+}
+
+.car-outer {
+  max-height: 0px;
+  width: 315px;
+  position: absolute;
+  right: 0;
+  border:1px solid;
+  display: none;
+  transition: .6s linear;
+  z-index: 500;
+  transform: translatey(-10px);
+  background-color: #fff;
+}
+.car-inner {
+  height: 535px;
+  overflow-y: scroll;
+}
+
+.header-wrapper {
+  position: relative;
+}
+header {
+  width: 1226px;
+  height: 100px;
+  margin: auto;
+
+  img{
+    width: 50px;
+    height: 50px;
+    background-color:rgb(255, 103, 0);
+    float: left;
+    margin-top: 25px;
+  }
+}
+.header-main {
+  display: inline-block;
+  width: 770px;
+  margin-left: 188px;
+  height:100px;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    width: 1226px;
+    margin: auto;
+
+    li {
+      float: left;
+
+      a{
+        display: inline-block;
+        text-decoration: none;
+        font-size: 16px;
+        padding: 35px 10px;
+        vertical-align: top;
+      }
+    }
+  }
+}
+.main-list {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top:100px;
+  border: 1px solid;
+  height: 230px;
+
+  div {
+    width: 160px;
+    height: 230px;
+    border: 1px solid;
+  }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    section {
+      margin-top: 80px;
+        width: 600px;
+      height: 400px;
+      transform-style:preserve-3d;
+      transform: rotatex(45deg) rotatey(45deg);
+      position:relative;
+      transition:2s;
+    }
+    section:hover {
+      transform: rotatex(45deg) rotatey(145deg);
+    }
+    div {
+      height: 80px;
+      width: 80px;
+      position: absolute;
+      text-align:center;
+      left:0;
+      top:0;
+      bottom:0;
+      right:0;
+      margin: auto;
+    }
+    .one{
+      background-color: rgba(111,2,25,0.5);
+      transform: translatez(40px);
+    }
+    .two{
+      background-color: rgba(11,222,25,0.5);
+      transform: translatez(-40px);
+    }
+    .th{
+      background-color: rgba(144,22,251,0.5);
+      transform: rotatey(-90deg) translatez(40px);
+        }
+    .four{
+      background-color:rgba(1,22,25,0.5);
+      transform:  rotatey(90deg) translatez(40px) ;
+    }
+    .five{
+      background-color: rgba(220,22,25,0.5);
+      transform:  rotatex(90deg) translatez(40px)  ;
+    }
+    .six{
+      background-color: rgba(22,69,25,0.5);
+      transform: rotatex(-90deg) translatez(40px) ;
+    }   
+  </style>
+</head>
+<body>
+    <section>
+      <div class="one"></div>
+      <div class="two"></div>
+      <div class="th"></div>
+      <div class="four"></div>
+      <div class="five"></div>
+      <div class="six"></div>
+    </section>
+</body>
+</html>
