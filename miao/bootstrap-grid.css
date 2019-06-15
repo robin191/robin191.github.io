@@ -527,6 +527,9 @@ html {
   .container {
     width: 1170px;
   }
+  [class^="col-lg-"],[class*=" col-lg-"]{
+    float: left;
+  }
   .visible-lg-block {
     display: block;
   }

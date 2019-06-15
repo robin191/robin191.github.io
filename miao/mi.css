@@ -119,6 +119,7 @@ header {
   width: 1226px;
   height: 100px;
   margin: auto;
+  position: relative;
 }
 header > img{
   width: 50px;
@@ -209,13 +210,13 @@ header > img{
 
  .search {
   position: absolute;
-  right: 380px;
+  right: 0px;
   top: 23px;
 } 
 .search input {
   display: inline-block;
   width: 244px;
-  height: 50px;
+  height: 52px;
   border: 1px solid rgb(224, 224, 224);
 }
 .search input:nth-child(2) {
@@ -224,7 +225,7 @@ header > img{
 .search label {
   position: absolute;
   top: 0;
-  right: -51px;
+  right: 0px;
   width: 50px;
   height: 52px;
   border: 1px solid rgb(224, 224, 224);
@@ -329,14 +330,27 @@ main {
 }
 .main-pic .la {
   position: absolute;
-  bottom: 10px;
-  right: 30px;
+  bottom: 25px;
+  right: 35px;
 }
 .main-pic .la label {
   display: inline-block;
-  width: 8px;
-  height: 8px;
-  border:1px solid white;
+  width: 10px;
+  height: 10px;
+  border:2px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.4);
+  margin-left: 10px;
+}
+.main-pic .la label:hover {
+  background-color: rgba(255,255,255,0.4);
+  border-color:  rgba(0,0,0,0.4);
+}
+.la-r {
+  height: 70px;
+  width: 42px;
+  position: absolute;
+  right: 0;
 }
 
 
@@ -416,24 +430,38 @@ main .side i {
 }
 .product .phone {
   width: 1226px;
-  height: 680px;
+  height: 690px;
   margin: auto;
+  position: relative;
 }
+
 .phone-le a img{
+  margin-top: 14px;
   float: left;
   width: 235px;
-  height: 614px;
+  height: 615px;
+  display: block;
 }
-.phone-header p {
+.phone-hd {
+  height: 58px;
+  position: relative;
+  top: 15px;
+  
+}
+.phone-hd-1 p{
+  position: relative;
   font-size: 22px;
+  line-height: 58px;
 }
-.phone-header p:nth-child(2) {
-  float: right;
-  margin-top: -40px;
+.phone-hd-2 p {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 20px;
 }
 .ph1 {
-  width: 976px;
-  height: 614px;
+  width: 990px;
+  height: 615px;
   display: flex;
   justify-content: space-between;
   flex-wrap:wrap;
@@ -443,27 +471,33 @@ main .side i {
 .ph1 div {
   width: 235px;
   height: 300px;
-  
   background-color: #fff;
   border: 1px solid;
 }
 .ph1 div img {
   width: 160px;
   height: 160px;
+  margin: 20px auto;
+  display: block;
+  
 }
 .ph1 div p {
   font-size: 13px;
+  white-space: nowrap;
+  color: #b0b0b0;
 }
-.box-ph1 img {
-  margin: auto;
+.ph1 div span {
   display: block;
+  text-align: center;
 }
 .box-ph1 h3 {
   text-align: center;
   font-size: 14px;
   
 }
-
+.phone .ph1 div:nth-child(1),div:nth-child(2),div:nth-child(3),div:nth-child(4) {
+  margin-bottom: 15px;
+}
 
 
 
@@ -479,13 +513,17 @@ main .side i {
   width: 1226px;
   height: 100px;
   margin: auto;
+  margin-top: 40px;
 }
 
 
 .home {
   margin-top: 20px;
   width: 1226px;
+  height: 680px;
   margin: auto;
+  position: relative;
+  top: 20px;
 }
 .home p {
   font-size: 22px;
@@ -501,31 +539,92 @@ main .side i {
 .home-left img:first-child {
   margin-bottom: 15px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.product .rail3 {
-  margin-left: 130px;
-  margin-top: 10px;
+.home-r span {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  font-size: 20px;
 }
+.home-r span:first-child {
+  right: 250px;
+}
+.home-r span:nth-child(2) {
+  right: 140px;
+}
+.home-r span:nth-child(3) {
+  right: 70px;
+}
+.home-r span:nth-child(4) {
+  right:0px;
+}
+
+
+
+.home-r > div {
+  width: 990px;
+  height: 615px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap:wrap;
+  opacity: 0;
+  padding-left: 15px;
+  position: absolute;
+  right: 0;
+}
+.home-r div div {
+  width: 235px;
+  height: 300px;
+  background-color: #fff;
+  
+}
+.home-r div img {
+  width: 160px;
+  height: 160px;
+  margin: 20px auto;
+  display: block;
+  
+}
+.home-r [class*="-bo"] {
+  background-color: rgb(245,245,245);
+}
+.home-r [class*="-bo"] div {
+  width: 235px;
+  height: 142px;
+  background-color: #fff;
+}
+.home-r [class*="-bo"] div:first-child {
+  margin-bottom: 16px;
+} 
+
+
+.home-r .mainr-h {
+  opacity: 1;
+}
+.home-r span:hover:first-child ~ div:first-child {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .product .rail3 img {
-  width: 1200px;
+  width: 1226px;
   height: 100px;
+  margin: auto;
+  display: block;
+  margin-top: 40px;
 }
 
 .product .intell {
@@ -534,18 +633,17 @@ main .side i {
   border: 1px solid;
   width: 1200px;
 }
-.product .intell td {
+.product .intell {
   width: 220px;
   height: 260px;
 }
 
-.product .rail4 {
-  margin-left: 130px;
-  margin-top: 10px;
-}
+
 .product .rail4 img {
-  width: 1200px;
+  width: 1226px;
   height: 100px;
+  margin: auto;
+  display: block;
 }
 
 .product .match {
