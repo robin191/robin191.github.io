@@ -14,12 +14,11 @@
   console.log(d);
 </script>
 <script id="ch0103/03" type="x">
-  var a = +prompt(4)
-  var b = +prompt(5)
-  var c = +prompt(8)
+  var a = +prompt("请输入")
+  var b = +prompt("请输入")
+  var c = +prompt("请输入")
   var d = (a + b) / c
-
-  console.log(d);
+  console.log(Math.ceil(d));
 </script>
 <script id="ch0103/04" type="x">
   var a = +prompt("请输入")
@@ -39,9 +38,8 @@
 <script id="ch0103/06" type="x">
   var a = +prompt("请输入")
   var b = +prompt("请输入")
-  var c = b / a
-
-  console.log(c.toFixed(3) + "%");
+  var c = ((b / a) * 100).toFixed(3)
+  console.log(c + "%");
 </script>
 <script id="ch0103/07" type="x">
   var a = +prompt("请输入")
