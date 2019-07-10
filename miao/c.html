@@ -1,0 +1,916 @@
+<script id="ch0105/46" type="x">
+  var isUgly = function (num) {
+    var a = 1
+    if (num % 2 == 0 || num % 3 == 0 || num % 5 == 0) {
+      for (i = 0; ; i++) {
+        a *= 2
+        if (a == num) {
+          return true
+        }
+        for (i = 0; ; i++) {
+          a *= 3
+          if (a == num) {
+            return true
+          }
+          for (i = 0; ; i++) {
+            a *= 5
+            if (a == num) {
+              return true
+            }
+
+          }
+          debugger
+          var a = +prompt("请输入")
+          if (isUgly(a)) {
+            console.log("YES")
+          } else {
+            console.log("NO")
+          }
+</script>
+<script>
+  debugger
+  var isPerfectSquare = function (num) {
+    for (var i = 1; ; i++) {
+      if (num == i * i) {
+        return true
+      } else {
+        return false
+      }
+      continue
+    }
+  }
+  isPerfectSquare()
+</script>
+<script>
+  debugger
+  var a = +prompt("请输入")
+  var isHappy = function (n) {
+    while (true) {
+       var sum = 0
+      while (n > 0) {
+        var digit = n % 10
+        sum += digit * digit
+        n = (n - digit) / 10
+      }
+      if (sum == 1) {
+      return true
+    } else if (sum == 4) {
+         return false
+    } else {
+        n = sum
+    }
+        
+    }
+  };
+  isHappy(a)
+</script>
+<script>
+  
+  var a = +prompt("请输入")
+  var checkPerfectNumber = function (num) {
+    var sum = 0
+
+    for (var i = 1; i <= num / 2; i++) {
+      if (num % i == 0) {
+        sum += i
+      }
+    }
+    return sum == num
+  };
+  debugger
+  checkPerfectNumber(28)
+</script>
+<script>
+  var sum = 0
+  while (x != 0) {
+    var digit = x % 10
+    sum = sum * 10 + digit
+    if (sum > (2147483647 - digit) / 10) {
+      return 0
+    }
+    if (sum < (-2147483648 - digit) / 10) {
+      return 0
+    }
+    x = (x - digit) / 10
+  }
+  return (sum)
+</script>
+<script>
+  debugger
+  var a = +prompt("请输入")
+  var addDigits = function (num) {
+    for (var i = 0; ; i++) {
+      var sum = 0
+      while (num > 0) {
+        var digit = num % 10
+        sum += digit
+        num = (num - digit) / 10
+      }
+      num = sum
+      if (num < 9) {
+        console.log(num)
+      }
+    }
+
+  };
+  addDigits(a)
+</script>
+<script>
+  debugger
+  var a = +prompt("请输入")
+  var convertToBase7 = function (num) {
+    for (var i = 0; ; i++) {
+      var sum = 0
+      if (num < 0) {
+        while (num != 0) {
+        var digit = num % 7
+        num = (num - digit) / 7
+        sum = num * 10 + digit
+      }
+      num = "-" + sum
+      }
+
+      while (num != 0) {
+        var digit = num % 7
+        sum = sum * 10 + digit
+        num = (num - digit) / 7
+      }
+      num = sum + ""
+      return num
+    }
+  };
+  convertToBase7(a)
+</script>
+<script>
+  debugger
+  var selfDividingNumbers = function (left, right) {
+    for (var i = left; i <= right; i++) {
+      var m = i
+      while (i > 0) {
+        var digit = i % 10
+        if (digit != 0) {
+          var sum = m % digit
+        }
+        i = (i - digit) % 10
+      }
+      if (sum == 0) {
+        console.log(m)
+      }
+    }
+
+  };
+  selfDividingNumbers(1, 22)
+</script>
+<script>
+  debugger
+  var myPow = function(x, n) {
+    if (n == 0) {
+        return 1
+    }
+    var sign = n > 0 ? 1 : -1
+    var relust = 1
+    var a = x
+    var m = Math.abs(n)
+    while (m > 0) {
+        if (m % 2 == 1) {
+        relust *= a
+    }
+        a = a * a
+        m = Math.floor(m /2)
+    }
+    
+    if (sign < 0) {
+        return 1 / relust
+    }
+    return relust
+};
+myPow(2,-2147483648)
+</script>
+<script>
+  debugger
+  var myPow = function(x, n) {
+    var m = n
+    if (n == 0) {
+        return 1
+    }
+    var n = Math.abs(n)
+    var relust = 1
+    var a = x
+    while (n > 0) {
+        if (n % 2 == 1) {
+        relust *= a
+    }
+        a = a * a
+        n = n >>> 1
+    }
+    if (m < 0) {
+        return 1 / relust
+    }
+    return relust
+};
+myPow(2,-2147483648)
+</script>
+<script>
+  debugger
+  var missingNumber = function(nums) {
+    for (var i = 0;; i++) {
+        var idx = nums.indexOf(i)
+        if (idx == -1) {
+            return i
+        } else {
+            nums.splice(idx,1)
+        }
+    }
+ };
+ missingNumber([9,6,4,2,3,5,7,0,1])
+</script>
+<script>
+  debugger
+  var moveZeroes = function(nums) {
+   var len = nums.length
+   var non = 0
+    for (var i = 0;i < nums.length;i++) {
+       if ( nums[i] != 0)  {
+          nums[non++] = nums[i]
+        }
+        
+    }
+    for (;non < len;non ) {
+            nums[non++] = 0
+            
+        }
+};
+moveZeroes([0,1,0,3,12])
+</script>
+<script>
+  debugger
+  var removeElement = function(nums, val) {
+    var notval = 0
+    var len = nums.length
+    for (var i = 0;i < len;i++) {
+        if (nums[i] != val) {
+            nums[notval++] = nums[i]
+        }
+    } 
+    
+};
+removeElement([0,1,2,2,3,0,4,2],2)
+</script>
+<script>
+  var isPerfectSquare = function(num) {
+    var low = 0
+    var high = num
+      while (high - low > 1) {
+           var mid = Math.floor((low + high) / 2)
+           var a = mid * mid
+           if (a > num) {
+              high = mid 
+           }else if (a < num) {
+            low = mid
+        } else {
+            return true
+        }
+      }
+    return false
+};
+debugger
+isPerfectSquare(16)
+</script>
+<script>
+  var fizzBuzz = function(n) {
+    var ary = []
+    for ( var i = 0;i < n; i++) {
+        var a = i + 1
+        if ( i == 0) {
+            ary[0] = String("1")
+        } else if (i % 3 == 0) {
+            ary[i] = String("Fizz")
+        } else if (i % 5 == 0) {
+            ary[i] = String("Buzz")
+        } else if (i % 15 == 0) {
+            ary[i] = String("FizzBuzz")
+        } else {
+            ary[i] = a
+        }
+         
+    }
+    return ary
+};
+debugger
+fizzBuzz(15)
+</script>
+<script>
+  function isLeapYear(y) {
+    if
+  }
+  function weekday(year, month) {
+  var days = 0
+  for(var y = 1; y < year; y++) {
+    if (isLeapYear(y)) {
+      days += 366
+    } else {
+      days += 365
+    }
+  }
+
+  for(var m = 1; m < month; m++) {
+    days += getMonthDays(year, m)
+  }
+
+  return (days + 1) % 7
+}
+
+function weekday2(year, month) {
+  var y = year - 1
+  var days = y * 365 + Math.floor(y / 4) - Math.floor(y / 100) + Math.floor(y / 400)
+
+  for(var m = 1; m < month; m++) {
+    days += getMonthDays(year, m)
+  }
+
+  return (days + 1) % 7
+}
+
+</script>
+<script>
+  var twoSum = function(nums, target) {
+    var len = nums.length - 1
+    for (var i = 0; i <= len;i++) {
+        for (var a = i + 1;a <= len; a++) {
+          var sum = nums[i] + nums[a]
+            if (nums[i] + nums[a] == target ) {
+            return [i,a] 
+            }
+        }
+    }
+};
+debugger
+twoSum([1,3,2,4],6)
+</script>
+<script>
+  var selfDividingNumbers = function(left, right) {
+    var ary = []
+    for (left;left <= right;left++) {
+      var m = left
+        while (m > 0 ) {
+            var digit = m % 10
+            m = (m - digit) / 10
+        }
+        if (digit == 0 || left % digit != 0 ) {
+              false
+            }
+        if (digit != 0  && left % digit == 0){
+              ary.push(left)
+            }
+    }
+    return ary
+};
+debugger
+selfDividingNumbers(10,22)
+</script>
+<script>
+  var selfDividingNumbers = function(left, right) {
+    var ary = []
+    for (left;left <= right;left++) {
+      var m = left
+        while (m > 0 ) {
+            var digit = m % 10
+            if (digit != 0 ) {
+                var sum = left % digit
+                if (sum == 0) {
+                  m = (m - digit) / 10 
+                } else {
+                  break
+                } 
+            } else {
+              
+              break
+            }
+            
+        }
+        if (sum == 0 && digit != 0) {
+            ary.push(left)  
+           } 
+    }
+    return ary
+};
+  debugger
+selfDividingNumbers(8,22)
+</script>
+<script>
+  var findMaxConsecutiveOnes = function(nums) {
+    var len = nums.length
+    var n = 0
+    var h = 0
+    for (var i = 0;i < len;i++) {
+        if (nums[i] == 1) {
+            n++
+            
+        } else if (nums[i] == 0) {
+            n = 0
+        }
+        var sum = n
+        if ( n != 0) {
+          if (sum > h) {
+            h = sum
+        } 
+    }
+         
+        
+    }
+    return h
+    
+};
+debugger
+findMaxConsecutiveOnes([1,0,1,1,0,1])
+</script>
+<script>
+  var merge = function(nums1, m, nums2, n) {
+    var num = m + n - 1                                                              
+      var n1 = m - 1 
+      var n2 = n - 1
+      
+       while (n1 >= 0 && n2 >= 0) {
+            if (nums1[n1] > nums2[n2]) {
+                nums1[num--] = nums1[n1--]
+                
+                
+            } else if (nums1[n1] <= nums2[n2]) {
+                nums1[num--] = nums2[n2--]
+                 
+            } 
+            
+        }
+    while (n2 >= 0) {
+        nums1[num--] = nums2[n2--]
+    }
+    return nums1
+};
+debugger
+merge([4,5,6,0,0,0],3,[1,2,3],3)
+</script>
+<script>
+  var judgeSquareSum = function(c) {
+    var num = Math.floor(Math.sqrt(c))
+    for (var i = 0;i <= num ;i++) {
+        for (var n = 1;n <= num;n++) {
+            if (i * i + n * n == c) {
+                return true
+            }
+                
+        }
+            
+        }
+       return false 
+    
+};
+debugger
+judgeSquareSum(4)
+</script>
+<script>
+  var reverse = function(x) {  
+  if (x < 0) {
+      var n = -1
+      x = Math.abs(x)
+  }
+  var sum = 0
+  while (x != 0) {
+      var digit = x % 10
+      
+      sum = sum * 10 + digit
+      x = (x - digit) / 10
+  }
+
+  var a = 2147483647
+  if (sum > a) {
+          return 0
+      }
+  if (n == -1) {
+      sum = n * sum
+  }
+  if  (sum < -2147483647) {
+           return 0
+           }
+  return (sum)
+};
+debugger
+reverse(-2147483412)
+</script>
+<script>
+  var searchInsert = function(nums, target) {
+    for (var i = 0;i < nums.length ;i++) {
+        if (nums[i] == target) {
+            return i
+        } 
+    }
+    
+    var h = nums.length - 1
+    var l = 0
+    
+        while (h >= l) {
+            var mid = Math.floor((l + h) / 2) 
+            if (nums[mid] < target) {
+            l = mid + 1
+        }
+            if (nums[mid] > target ) {
+            h = mid - 1
+        }
+        } 
+    return l
+};
+debugger
+searchInsert([3,6,7,8,10],5)
+</script>
+<script>
+  var firstUniqChar = function(s) {
+    var sum = {}
+    for (var i = 0; i < s.length; i++) {
+        var char = s[i]
+        if (char in sum) {
+             sum[char]++
+        } else {
+           sum[char] = 1 
+        }
+       
+    }
+    
+    for (var i = 0;i < s.length;i++) {
+        var char = s[i]
+        if (sum[char] == 1) {
+            return i
+        }
+    }
+};
+debugger
+firstUniqChar("leetcode")
+</script>
+<script> 
+  var findWords = function(words) {
+    var map = [
+        {"ens": ["q","w","e","r","t","y","u","i","o","p"]},
+        {"ens": ["a","s","d","f","g","h","j","k","l"]},
+        {"ens": ["z","x","c","v","b","n","m"]}
+        ]
+        
+      for (var b = 0;b < map.length;b++) {
+        var s = map[b]
+        var en = s.ens
+          for (var i = 0;i < words.length;i++) {
+              var n = words[i]
+              for (var a = 0;a < n.length;a++) {
+                var na = n.charAt(a)
+                var sum = 0
+                for (var c = 0;c < en.length;c++) {
+                  if (na == en[c]) {
+                    sum++
+                  }
+                  if (sum == n.length) {
+                    var num = words.indexOf(n)
+                    words = words.splice(num,1) 
+                  }
+                }
+              }
+        }
+      }
+       return words  
+  };
+  debugger
+  findWords(["Hello","Alaska","Dad","Peace"])
+  
+</script>
+<script>
+  var findWords = function(words) {
+    var map = [
+        {"ens": ["q","w","e","r","t","y","u","i","o","p","Q","W","E","R","T","Y","U","I","O","P"]},
+        {"ens": ["a","s","d","f","g","h","j","k","l","A","S","D","F","G","H","J","K","L"]},
+        {"ens": ["z","x","c","v","b","n","m","Z","X","C","V","B","N","M"]}
+        ]
+      var ary = []
+      for (var b = 0;b < map.length;b++) {
+        var s = map[b]
+        var en = s.ens
+        
+          for (var i = 0;i < words.length;i++) {
+              var n = words[i]
+              for (var a = 0;a < n.length;a++) {
+                var na = n.charAt(a)
+                var som = en.includes(na)
+                if (som == false) {
+                  break
+                } 
+              }
+              if (som == true) {
+                  ary.push(n) 
+                } 
+        }
+         
+      }
+    return ary   
+};
+debugger
+  findWords(["Hello","Alaska","Dad","Peace"])
+</script>
+<script>
+  var reverseBits = function(n) {
+    var sum = 0
+    for (var i = 0;i < 32;i++ ) {
+        var digit = (n >> i) & 1
+        sum = (sum << 1) + digit
+    }
+    return sum >>> 0
+  };
+   debugger
+   reverseBits(00000010100101000001111010011100)
+</script>
+<script>
+  var singleNumber = function(nums) {
+    var map = {}
+    for (var i = 0;i < nums.length;i++) {
+        var n = nums[i] 
+            if (n in map) {
+                map[n]++
+            } else {
+                map[n] = 1
+            }
+      }
+    for ( var key in map) {
+      if (map[key] == 1) {
+        return key
+      }
+    }
+      
+  };
+debugger
+singleNumber([4,1,2,1,2])
+</script>
+<script>
+ var sortedSquares = function(A) {
+    var ary = []
+    ary.length = A.length
+    var j = ary.length - 1
+
+    var len = A.length - 1
+
+    var min = Infinity
+    var max = -Infinity
+    
+      for (var i = 0;i < A.length;i++) {
+        var a = Math.abs(A[i])
+        var c = A.indexOf(0)
+        if (a < min) {
+            min = a
+        }
+        if (a > max) {
+          max = a
+        }
+      }
+
+      if (Math.abs(A[len]) == min ) {
+        if (0 in A && c == len) {
+          for (var i = 0;i < A.length;i++) {
+        ary[i] = A[len] * A[len]
+        len--
+        }
+        
+      } 
+        return ary
+      }
+
+      if (Math.abs(A[len]) == max) {
+       for (var i = 0;i < A.length;i++) {
+        ary[i] = A[i] * A[i]
+       }
+       return ary
+     }
+
+
+    
+};
+debugger
+sortedSquares([-4,-1,0,3,10])
+</script>
+<script>
+  var minMoves = function(nums) {
+    var sum = 0
+     var min = Infinity
+    for (var i = 0;i < nums.length;i++) {
+        var n = nums[i]
+       
+        if (n < min) {
+            min = n
+        }
+    }
+    for (var i = 0;i < nums.length;i++) {
+      var a = nums[i] - min
+        sum = sum + a
+    }
+    
+    return sum
+};
+debugger
+minMoves([1,2,3,3,5])
+</script>
+<script>
+var minMoves2 = function(nums) {
+    var num = nums.sort()
+    var len = num.length
+    var sum = 0
+    if (len % 2 == 1) {
+        var a = Math.floor(len / 2)
+        var n = num[a]
+        for (var i = 0;i < len;i++) {
+            var d = Math.abs(num[i] - n)
+            sum = sum + d
+        }
+        return sum
+    }
+    
+    if (len % 2 == 0) {
+        var a = len / 2
+        var n = num[a]
+        for (var i = 0;i < len;i++) {
+            var d = Math.abs(num[i] - n)
+            sum = sum + d
+        }
+        return sum
+    }
+};
+</script>
+<script>
+    var distributeCandies = function(candies) {
+    var ary = []
+    var c = 0
+    for (var i = 0;i < candies.length;i++) {
+        var n = candies[i] 
+        if (ary.includes(n) == false) {
+          ary.push(n)
+        }
+    }
+    if (ary.length >= candies.length / 2) {
+        return candies.length / 2
+    } else if (ary.length < candies.length / 2) {
+        return  ary.length
+    }
+    
+};
+debugger
+distributeCandies([1,1,1,1,2,3])
+</script>
+<!-- <script>
+  var isValid = function(s) {
+    var ary = []
+    for (var i = 0;i < s.length;i++) {
+        var char = s[i]
+        if (char == "(" || char == "{" || char == "[") {
+            ary.push(char)
+        } else {
+            if (char == ")") {
+                if (ary[ary.length - 1] == "(") {
+                  ary.pop()
+                } else {
+                  return false
+                }  
+        }
+        if (char == "}") {
+                if (ary[ary.length - 1] == "{") {
+                  ary.pop()
+                } else {
+                  return false
+                }  
+        }
+        if (char == "]") {
+                if (ary[ary.length - 1] == "[") {
+                  ary.pop()
+                } else {
+                  return false
+                }  
+        }
+    }
+    return true
+};
+debugger
+isValid("{[]}")
+</script> -->
+<script>
+  var groupAnagrams = function(strs) {
+    var map = {}
+    for (var i = 0;i < strs.length;i++) {
+        var str = strs[i]
+        var key = str.split("").sort().join("")
+        if (key in map) {
+            map[key].push(str)
+        } else {
+            map[key] = [str]
+        }
+    }
+    return Object.values(map)
+};
+debugger
+groupAnagrams(["eat","tea","tan","ate","nat","bat"])
+</script>
+<script>
+  var lengthOfLongestSubstring = function(s) {
+    if (s.length == 0) {
+        return 0
+    }
+    var map = {}
+    var ary = []
+    var j = 0
+    var max = 1
+    for (var i = 0;i < s.length;i++) {
+        var n = s[i] 
+        if (n in map) {
+            map[n]++
+        } else {
+            map[n] = 1
+        }
+
+        if (map[n] == 2) {
+          while (map[n] == 2) {
+              var na = s[j]
+              map[na]--
+               j++
+            }
+      }
+        max = i - j + 1
+        ary.push(max)
+    }
+    
+    return Math.max.apply(null,ary)
+};
+debugger
+lengthOfLongestSubstring("pwwkew")
+</script>
+<script>
+  var addBinary = function(a, b) {
+  var ary1 = a.split("")
+    var ary2 = b.split("")
+  
+    for (var i = 0;i < a.length ; i++) {
+        ary1[i] = Number(ary1[i])
+    }
+    for (var g = 0;g < b.length ; g++) {
+        ary2[g] = Number(ary2[g])
+    }
+    
+    if (i > g) {
+        for (var a = 0;a < i - g;a++) {
+            ary2.unshift(0)
+        } 
+    } else if (i < g) {
+            for (var b = 0;b < g - i;b++) {
+            ary1.unshift(0)
+        }
+    }
+     var c = ary1.length - 1
+     var p = []
+      if (c == 0) {
+         if (ary2[c] + ary1[c] != 2) {
+          p.unshift(ary2[c] + ary1[c])
+         }
+     }
+      for (c;c > 0;c--) {
+        if (ary2[c] + ary1[c] < 2) {
+          p.unshift(ary2[c] + ary1[c])
+        }else if (ary2[c] + ary1[c] == 2) {
+          p.unshift(0)
+          ary2[c - 1] + ary1[c - 1]++  
+       } else if (ary2[c] + ary1[c] > 2) {
+           p.unshift(1)
+           ary2[c - 1] + ary1[c - 1]++  
+       }
+       
+       }
+   
+       if (ary2[0] + ary1[0] == 2) {
+            p.unshift(0)
+             p.unshift(1)
+        }   else if (ary2[0] + ary1[0] >= 2) {
+             p.unshift(1)
+             p.unshift(1)
+        }
+    return p.join("")
+};
+
+</script>
+<script>
+  var addStrings = function(num1, num2) {
+    var result = ""
+   var i = num1.length - 1
+   var j = num2.length - 1
+   var carry = 0
+   var main
+   while (i >= 0 || j >= 0) {
+        var sum = (~~num1[i--]) + (~~num2[j--] + carry
+        main = sum % 10
+        carry = (sum - main) / 10
+        result = main + result             
+   }
+    
+    if (carry) {
+        return carry + result
+    }
+   return result
+};
+</script>
+
