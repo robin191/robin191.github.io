@@ -893,7 +893,7 @@ lengthOfLongestSubstring("pwwkew")
 };
 
 </script>
-<script>
+<!-- <script>
   var addStrings = function(num1, num2) {
     var result = ""
    var i = num1.length - 1
@@ -912,5 +912,114 @@ lengthOfLongestSubstring("pwwkew")
     }
    return result
 };
+</script> -->
+<script>
+  function arrarToList(ary) {
+        var nodes = []
+        for (var i = 0;i < ary.length; i++) {
+            var node = {
+                value: ary[i],
+                next: null
+            }
+            nodes.push(node)
+        }
+        for (var i = 0;i < nodes.length - 1;i++) {
+            nodes[i].next = nodes[i + 1]
+        }
+        return nodes[0]
+    };
+  debugger
+  arrarToList([1,2,3,4,5])
 </script>
 
+<script>
+  function arrarToList2(ary) {
+        var dummy = {
+            value: undefined,
+            next: null,
+        }
+        var prev = dummy
+        for (var i = 0;i < ary.length; i++) {
+            var node = {
+                value: ary[i],
+                next: null
+            }
+            prev.next = node
+            prev = node
+        }
+        return dummy.next
+    };
+    debugger
+    arrarToList2([1,2,3,4,5])
+</script>
+<script>
+  var hasCycle = function(head) {
+    if (head == null) {
+       return false
+   }
+
+    var slow = head
+    var fast = head
+    
+    while (slow != null && fast != null) {
+        slow = slow.next
+        fast = fast.next.next
+        if (slow == fast) {
+            return true
+        }
+    }
+    return false
+};
+debugger
+hasCycle([3,2,0,-4],1)
+</script>
+
+
+<script>
+  var longestCommonPrefix = function(strs) {
+    var map = {}
+    
+    for (var i = 0; i < strs.length;i++,c++) {
+        var str = strs[i]
+        for (var c = 0; c < str.length;c++) {
+            var st = str.charAt(c)
+            if (st in map) {
+            map[st]++
+            } else {
+               map[st] = 1 
+            }
+           
+    }
+    }
+    
+    var sum = []
+    for (st in map) {
+        if (map[st] == strs.length) {
+                sum.push(st)
+        } else {
+            break
+        }
+        
+    }
+    return sum.join("")
+};
+debugger
+longestCommonPrefix(["aa","aa"])
+</script>
+<script>
+  var buildTree = function(inorder, postorder) {
+    if (inorder.length == postorder.length) {
+        var root = {
+            val: postorder[postorder.length - 1] ,
+            left: null,right: null,
+        }
+        for (var i = 0;i < inorder.length;i++) {
+            if (inorder[i] == postorder[i]) {
+                var root.left = inorder[i]
+            }
+        }
+            
+    }
+    
+};
+</script>
