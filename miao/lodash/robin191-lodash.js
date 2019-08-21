@@ -2,9 +2,7 @@ var robin191 = {
   compact: function (ary) {
     return ary.filter(it => it)
   },
-}
 
-var robin191 = {
   difference: function (ary, ...value) {
     var result = []
     for (var i = 0; i < ary.length; i++) {
@@ -16,23 +14,32 @@ var robin191 = {
     }
     return result
   },
-}
 
-var robin191 = {
+  differenceBy: function () {
+    
+  },
+
   dorp: function (ary,number) {
     return ary.slice(number,ary.length)
   },
-}
 
-var robin191 = {
   dorpRight: function (ary,number) {
     for (var i = 0;i < number;i++) {
       return ary.pop()
     }
   },
-}
 
-var robin191 = {
+  dropRightWhile: function () {
+    
+  },
+
+  fill: function (ary,value,start,end) {
+    for (var i = start; i <= end ;i++) {
+      arr[i] = value
+    }
+    return ary
+  },
+
   flatten: function (ary) {
     var result = []
     for (var item of ary) {
@@ -46,9 +53,7 @@ var robin191 = {
     }
     return result
   },
-}
 
-var robin191 = {
   flattenDeep: function (ary) {
     var result = []
     for (var item of ary) {
@@ -61,9 +66,7 @@ var robin191 = {
     }
     return result
   },
-}
 
-var robin191 = {
   flattenDepth: function (ary, depth = 1) {
     if (depth == 0) {
       return ary.slice()
@@ -79,5 +82,41 @@ var robin191 = {
     }
     return result
   },
-}
 
+  head: function (ary) {
+    if (ary.length == 0) {
+      return undefined
+    }
+    return ary[0]
+  },
+
+  indexOf: function (ary, value, fromIndex = 0) {
+    for(var i = fromIndex;i < ary.length;i++) {
+     if(ary[i] == value) {
+       return i
+     }
+    }
+    return -1
+   },
+
+   intersection: function (ary) {
+    return ary.slice(0,ary.length - 1)
+  },
+
+  initial: function (ary) {
+    return ary.slice(0,ary.length - 1)
+  },
+
+  initial: function (ary) {
+    return ary.slice(0,ary.length - 1)
+  },
+
+  initial: function (ary) {
+    return ary.slice(0,ary.length - 1)
+  },
+
+  initial: function (ary) {
+    return ary.slice(0,ary.length - 1)
+  },
+
+}
