@@ -1,4 +1,12 @@
 var robin191 = {
+  chunk: function (ary,number) {
+    var array = []
+    var len = ary.length
+    if (len <= 1) {
+      return ary
+    }
+    for(var )
+  },
   compact: function (ary) {
     return ary.filter(it => it)
   },
@@ -99,12 +107,29 @@ var robin191 = {
     return -1
    },
 
-   intersection: function (ary) {
+  initial: function (ary) {
     return ary.slice(0,ary.length - 1)
   },
 
-  initial: function (ary) {
+  intersection: function (ary) {
     return ary.slice(0,ary.length - 1)
+  },
+
+  jion: function (ary,separator) {
+    var res = ary[0]
+    for (var i = 1;i < ary.length;i++) {
+      res += separator + ary[i].toString()
+    }
+
+    return res
+  },
+
+  last: function (ary) {
+    return ary[ary.length - 1]
+  },
+
+  lastIndexOf: function (ary,value,fromIndex) {
+   
   },
 
   initial: function (ary) {
