@@ -5,8 +5,14 @@ var robin191 = {
     if (len <= 1) {
       return ary
     }
-    for(var )
+    for(let i= 0; i < Math.ceil(ary.len / number); i++) {
+      let ary = array.slice(0,number - 1)
+      array.push(ary)
+      array.splice(0,number - 1)
+    }
+    return array
   },
+
   compact: function (ary) {
     return ary.filter(it => it)
   },
@@ -23,8 +29,8 @@ var robin191 = {
     return result
   },
 
-  differenceBy: function () {
-    
+  differenceBy: function (array,values,predicate) {
+    let predicate = iteratee(predicate)
   },
 
   dorp: function (ary,number) {
@@ -46,6 +52,26 @@ var robin191 = {
       arr[i] = value
     }
     return ary
+  },
+
+  findIndex: function(array,predicate,start = 0) {
+    let predicate = iteratee(predicate)
+    for(let i = 0;i < array.length;i++) {
+      if(predicate(array[i])) {
+        return i
+      }
+    }
+    return -1
+  },
+
+  findLastIndex: function(array,predicate,fromIndex=array.length-1) {
+    let predicate = iteratee(predicate)
+    for(let i = array.length-1;i >= 0;i--) {
+      if(predicate(array[i])){ 
+        return i
+      }
+    }
+    return -1
   },
 
   flatten: function (ary) {
@@ -129,18 +155,75 @@ var robin191 = {
   },
 
   lastIndexOf: function (ary,value,fromIndex) {
-   
+   for(let i = ary.length - 1;i >0;i--) {
+     if(ary[i] == value) {
+       return i
+     }
+   }
+   return -1
   },
 
-  initial: function (ary) {
+  pull: function (ary,value) {
+    for(let i = 0;i < ary.length;i++) {
+      if(ary[i] == value) {
+        ary.splice(i,1)
+        i--
+      }
+    }
+    return ary
+  },
+
+  reverse: function (ary) {
+    let number = ary.length
+    for(let i = 0;i < Math.ceil(number / 2) ;i++) {
+      let temp = ary[i]
+      ary[i] = ary[number - 1]
+      ary[number - 1] = temp
+      number--
+    }
+    return ary
+  },
+
+  sortedIndex: function (ary,value) {
+    var  last = ary.length
+    var  start = 0
+    var  mid = Math.floor((last + start) / 2)
+    
+    while(start < last) {
+      
+      if(ary[mid] >= value) {
+        last = mid
+      }else{
+        start = mid + 1
+      }
+    }
+    return start
+  },
+
+  union: function (...ary) {
+    var arys = flattenDeep(ary)
+    var res = []
+    for(var it of arys) {
+      if(!res.includs(it)) {
+        res.push(it)
+      }
+    }
+    return res
+  },
+
+  unionBy: function (ary) {
     return ary.slice(0,ary.length - 1)
   },
 
-  initial: function (ary) {
+  unzip: function (ary) {
     return ary.slice(0,ary.length - 1)
   },
 
-  initial: function (ary) {
+  without: function (ary) {
+    return ary.slice(0,ary.length - 1)
+  },
+
+  xor: function (ary) {
     return ary.slice(0,ary.length - 1)
   },
 

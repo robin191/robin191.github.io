@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=sc, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    class Snake {
+      constructor(width = 20,height = width) {
+        this.width = width
+        this.height = height
+
+        this.world = Array(height).fill(0).map(it => Array(width).fill('.'))
+
+        this.generateApple()
+        this.generateHead()
+
+        this.head = this.tail = this.generateHead()
+      }
+
+      generateHead() {
+        var x = ((this.width / 2) * Math.random() + this.width / 4)  | 0
+        var y = ((this.height / 2) * Math.random() + this.height / 4)  | 0
+        if (this.world[y][x] == ".") {
+          this.world[y][x] = '>'
+          return [x,y]
+        } else {
+          return this.generateHead()
+        }
+      }
+
+      generateApple() {
+        var x = this.width * Math.random() | 0
+        var y = this.height * Math.random() | 0
+        if (this.world[y][x] !== "Q") {
+          this.world[y][x] = 'Q'
+          return [x,y]
+        } else {
+          return this.generateApple()
+        }
+      }
+
+      getNextPos() {
+        switch(this.world[y][x]) {
+          case 'A':
+            return [x,y + 1]
+          case 'V':
+            return [x,y - 1]
+          case '<':
+            return [x - 1,y]
+          case '>':
+            return [x + 1,y]
+
+        }
+      }
+
+        getPosFlag(x,y) {
+          return this.world[y][x]
+        }
+
+        setPosFlag(x,y,flag) {
+          this.world[y][x] = flag
+        }
+
+        next() {
+          var [hx,hy] = this.head
+          var [hnx,hny] = this.getNextPos(hx,hy)
+          var [tx,ty] = this.tail
+          var [tnx,tny] = this.getNextPos(tx,ty)
+
+          var headFlag = this.getPosFlag(hx,hy)
+          var headNextFlag = this.getPosFlag(hnx,hny)
+
+          if(headNextFlag == 'Q') {
+            this.setPosFlag(hnx,hny)
+            this.head = [hnx,hny]
+            this.generateApple()
+          }else {
+            this.setPosFlag(hnx,hny)
+            this.head = [hnx,hny]
+            this.tail = [tnx,tny]
+            this.setPosFlag(tx,ty,'.')
+          }
+        }
+
+        toString() {
+            return  '\n' + this.world.map(it => it.join('')).join('\n')
+          }
+      
+      }
+  </script>
+</body>
+</html>
