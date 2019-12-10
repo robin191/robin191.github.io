@@ -1,0 +1,21 @@
+<!--pages/list/one.wxml-->
+<import src='/pages/template/tem-1.wxml' />
+<view>
+<swiper indicator-dots indicator-color="#fff6ed" catchtap="carouseToDetali">
+  <swiper-item>
+    <image data-idx="0" mode="aspectFit" src="../../images/one/5.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image data-idx="1" mode="aspectFit" src="../../images/one/0.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image data-idx="2" mode="aspectFit" src="../../images/one/8.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image data-idx="3" mode="aspectFit" src="../../images/one/5.jpg"></image>
+  </swiper-item>
+</swiper>
+<view wx:for='{{listArr}}' wx:key='{{index}}' catchtap="toDetail" data-index='{{index}}'>
+  <template is="tem1" data="{{...item}}"></template>
+</view>
+</view>

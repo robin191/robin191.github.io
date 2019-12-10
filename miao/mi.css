@@ -141,10 +141,10 @@ header > img{
   width: 1226px;
   margin: auto;
 }
-.header-main ul li {
+.header-main > ul > li {
   float: left;
 }
-.header-main ul li a{
+.header-main > ul > li > a{
   display: inline-block;
   text-decoration: none;
   font-size: 16px;
@@ -167,26 +167,65 @@ header > img{
 }
 
 .main-list ul {
+  position: relative;
+  top: -70px;
   width: 1226px;
   margin: auto;
   overflow: hidden;
+  display: flex;
+  justify-content:flex-start;
 }
-.main-list ul li {
-  float: flex;
+.main-list > ul > li {
   width: 160px;
   height: 230px;
 }
+.main-list img {
+  display: block;
+}
+.main-list .list-one-1 {
+  position: relative;
+  top: 20px;
+}
 .main-list .list-one-1 img {
-  width: 160px;
-  height: 110px;
+  padding-top: 10px;
+}
+.main-list .list-one-1 div {
+  position: relative;
+  top: 10px;
+  left: 40px;
+}
+.main-list .list-one-1 p {
+  position: relative;
+  left: 50px;
+  top: 5px;
+}
+.link-1 {
+  width: 1px;
+  height: 150px;
+  background-color: #8e9993;
+  position: relative;
+  top: -10px;
+  left: 159px;
+}
+.main-list .list-one-2 {
+  position: relative;
+  left: 0px;
+  top: -105px;
+}
+.main-list .list-one-2 a{
+  position: relative;
+  top: -50px;
+
 }
 .header-main ul:hover .main-list {
+  width: 100%;
   height: 230px;
   opacity: 1;
 }
 .header-main ul li:hover .main-list {
   z-index: 700;
 }
+
 .header-main div  div {
   display: none;
 }

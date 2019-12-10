@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+
+  </style>
+</head>
+<body>
+  <div id="app">
+    <table v-for="(it, idx) in world.length">
+      <td v-for="(item, index ) in world[0].length" 
+      @touch="clicked"
+      >{{}}</td>
+  </div> 
+
+  <script src="vue.js"></script>
+  
+  <script>
+    
+
+    var app = new Vue({
+      el:'#app',
+      
+      data: {
+        world: Array(4).fill('0').map(it => Array(4).fill('0')),
+
+      },
+      
+      method: {
+        touch(){
+          
+          
+        },
+        
+        mounted () {
+            this.Booms()
+          }
+      },
+
+      computed: {
+        changeImage(){
+    
+        },
+      },
+      
+      
+      
+
+      
+    }) 
+  </script>
+</body>
+</html>

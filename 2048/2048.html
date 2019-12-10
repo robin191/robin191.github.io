@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    div {
+      width: 500px;
+      height: 500px;
+      position: absolute;
+      margin: auto;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+
+    }
+
+    .boomImage {
+      background-image: url(boom.svg);
+    }
+    .flagImage {
+      background-image: url(flag.svg);
+    }
+    .kongColor {
+      background-color: #fff;
+    }
+    
+    td{
+      border:1px solid yellowgreen;
+      width: 15px;
+      height: 15px;
+      background-color: #EAFF56;
+      
+    }
+  </style>
+</head>
+<body>
+  <div id="app"
+  v-on:swipeleft="left" 
+  v-on:swiperight="right" 
+  v-on:swipeup="up" 
+  v-on:swipedown="down" 
+  >
+    <table v-for="(it, idx) in world.length">
+      <td v-for="(item, index ) in world[0].length" 
+      >{{item}}</td>
+  </div> 
+
+  <script src="vue.js"></script>
+  <script src="lodash.min.js"></script>
+  <script>
+    var VueTouch = require('vue-touch')
+    Vue.use(VueTouch)
+
+    var app = new Vue({
+      el:'#app',
+      data: {
+        world: Array(4).fill(0).map(it => Array(4).fill(0)),
+      },
+      
+      methods: {
+        left(){
+          for(var i = 0;i < 4;i++) {
+            for(var a = 0;a < 4;a++) {
+              let next = a + 1
+              if(this.world[i][a] !== 0){
+                if(this.world[i][next] == this.world[i][a]) {
+                  this.world[i][next] = this.world[i][next] * 2
+                  this.world[i][a] = 0
+                }else {
+                  _.findIndex()
+                }
+              }
+
+            }
+          }
+          
+        },
+        mounted () {
+            var num = (Math.random() * 10000).toString().slice(0,3)
+            var numAry = _.split(num,'').map(it => {
+                 it = parseInt(it)
+                if(it > 3 ) {
+                  it = 1
+                }
+                return it
+            })
+            for(var i = 0;i < 3; i++) {
+              if(i = 2) {
+                this.word[1][numAry[i]] = 4
+              }else {
+                this.word[1][numAry[0]] = 2
+              }
+            }
+          
+            
+        },
+      },
+
+    }) 
+  </script>
+</body>
+</html>
